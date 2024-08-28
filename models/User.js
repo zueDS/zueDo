@@ -19,6 +19,11 @@ userSchema.pre("save", async function(next){
    next(); 
 });
 
+//compare the password, check weather user entered password matching to the #password which is in database.
+userSchema.methods.comparePassword = async function(password){
+    return bcrypt.compare(password, this.password);
+}
+
 const User = mongoose.model("User", userSchema);
 
 
