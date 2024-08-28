@@ -12,7 +12,7 @@ const userSchema = new Schema({
 //encrypt the password into # using pre method
 userSchema.pre("save", async function(next){
    const user = this;
-   if(!user.isModified) return next();
+   if(!user.isModified('password')) return next();
    let salt = await bcrypt.genSalt(10);
    let hash = await bcrypt.hash(user.password,salt);
    user.password = hash;
