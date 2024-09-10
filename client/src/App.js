@@ -1,9 +1,11 @@
 import React from 'react'
-import {Route, Routes} from 'react-router'
-import Landing from './pages/Landing/landing'
-import Login from './pages/Auth/Login'
-import Register from './pages/Auth/Register'
-import ToDolist from './pages/ToDo/ToDolist'
+import {Route, Routes} from 'react-router';
+import Landing from './pages/Landing/landing';
+import Login from './pages/Auth/Login';
+import Register from './pages/Auth/Register';
+import ToDolist from './pages/ToDo/ToDolist';
+import './App.css';
+
 
 function App() {
   return (

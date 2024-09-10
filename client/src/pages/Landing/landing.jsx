@@ -7,12 +7,12 @@ import styles from './landing.module.css';
 function Landing() {
   return (
     <div>
-      <Navbar /> 
+      <Navbar active={"home"}/> 
       <div className={styles.landing__wrapper}>
         <div className={styles.landing__text}>
           <h1>Schedule Your Daily Task With <span class="primaryText">ZueDo!</span></h1>
           <div className='btnWrapper'>
-          <Link to="/regiser" className="primaryBtn">Register</Link>
+          <Link to="/register" className="primaryBtn">Register</Link>
           <Link to="/login" className="secondaryBtn">Login</Link>
         </div>
       </div>
