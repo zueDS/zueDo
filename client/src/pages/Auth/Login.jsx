@@ -10,7 +10,7 @@ import { getErrorMessage }from '../../util/GetError';
 function Login() {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
-    const [loading, setLoading] = useState("false");
+    const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
 
     const handleSubmit = async ()=>{
@@ -26,10 +26,11 @@ function Login() {
         localStorage.setItem('toDoAppUser',JSON.stringify(response.data));
         message.success("Logged In Successfully!");
         navigate('/to-do-list');
-        setLoading(false);
       }catch(err){
         console.log(err)
-        message.err(getErrorMessage(err));
+        message.error(getErrorMessage(err));
+        
+      }finally{
         setLoading(false);
       }
     }

@@ -12,7 +12,7 @@ const [username, setUsername] = useState("");
 const [password, setPassword] = useState("");
 const [firstName, setFirstName] = useState("");
 const [lastName, setLastName] = useState("");
-const [loading, setLoading] = useState("false");
+const [loading, setLoading] = useState(false);
 const navigate = useNavigate(); 
 
 const handleSubmit = async ()=>{
@@ -33,7 +33,7 @@ const handleSubmit = async ()=>{
 
     }catch(err){
       console.log(err)
-      message.err(getErrorMessage(err));
+      message.error(getErrorMessage(err));
       setLoading(false);
     }
   }
