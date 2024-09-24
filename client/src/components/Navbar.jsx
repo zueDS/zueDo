@@ -18,7 +18,7 @@ function Navbar({active}) {
 
   const handleLogout = ()=>{
     localStorage.removeItem('toDoAppUser');
-    navigate('/login');
+    navigate('/');
   }
 
   const items = [
