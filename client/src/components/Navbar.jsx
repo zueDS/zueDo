@@ -24,7 +24,7 @@ function Navbar({active}) {
   const items = [
     {
       key: '1',
-      lable: (
+      label: (
         <span onClick={handleLogout}>LogOut</span>
       ),
     },
