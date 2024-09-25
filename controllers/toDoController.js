@@ -43,10 +43,10 @@ exports.updateToDo = async (req, res)=> {
 
 exports.deleteToDo = async (req, res)=>{
     try{
-        const {id} = res.params;
+        const {id} = req.params;
         const result = await ToDo.findByIdAndDelete(id);
         console.log(result);
-        res.send({message:"ToDo Task Deleted!"})
+        res.send({message:"ToDo Task Deleted!"});
 
     }catch(err){
         console.log(err);
