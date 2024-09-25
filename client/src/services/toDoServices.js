@@ -6,7 +6,7 @@ const SERVER_URL = 'http://localhost:5001/api/todo';
 
 const authHeaders = ()=>{
     let userToken = getUserDetails()?.token;
-    return {headers:{'Authorization':userToken}}
+    return {headers:{'Authorization': userToken}}
 
 }
 
@@ -15,15 +15,15 @@ const createToDo = (data)=>{
 }
 
 const getAllToDo = (userId)=>{
-    return axios.get(SERVER_URL+'/get-all-to-do',+userId, authHeaders());
+    return axios.get(SERVER_URL+'/get-all-to-do/'+userId, authHeaders());
 }
 
 const deleteToDo = (id)=>{
-    return axios.get(SERVER_URL+'/delete-to-do',+id, authHeaders());
+    return axios.delete(SERVER_URL+'/delete-to-do/'+id, authHeaders());
 }
 
 const updateToDo = (id,data)=>{
-    return axios.get(SERVER_URL+'/update-to-do',+id,data, authHeaders());
+    return axios.patch(SERVER_URL+'/update-to-do/'+id,data, authHeaders());
 }
 
 
